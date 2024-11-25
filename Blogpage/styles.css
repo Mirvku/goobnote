@@ -1,0 +1,148 @@
+/* Menghapus margin default dari body dan menetapkan font secara global */
+body {
+  margin: 0;
+  font-family: medium-content-sans-serif-font; /* Menggunakan font Arial sebagai default, dengan fallback sans-serif */
+}
+
+/* Styling untuk header di bagian atas halaman */
+.header {
+  display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
+  justify-content: space-between; /* Menempatkan elemen di ujung kiri dan kanan */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  background-color: #8e7174; /* Warna coklat tua */
+  padding: 10px 10px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
+  color: white; /* Warna teks putih */
+}
+
+
+/* Styling untuk logo di dalam header */
+.logo {
+  display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  font-weight: bold; /* Membuat teks logo tebal */
+}
+
+.logo h1 {
+  font-size: 28px; /* Ukuran font besar untuk teks logo */
+}
+
+/* Styling untuk elemen gambar logo */
+.logo-img {
+  width: 10%;
+  height: auto;
+  margin-right: 10px;  /* Memberikan jarak antara logo gambar dan teks */
+}
+
+/* Styling untuk tombol dashboard di kanan header */
+.dashboard-button {
+  background-color: transparent; /* Warna latar belakang transparan */
+  border: none; /* Menghapus border */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Warna font lebih redup (putih dengan transparansi 70%) */
+  font-size: 1rem; /* Ukuran font tombol */
+  cursor: pointer; /* Mengubah kursor menjadi tangan saat diarahkan */
+  padding: 5px 10px; /* Ruang dalam di dalam tombol */
+  border-radius: 4px; /* Membulatkan sudut tombol */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Efek transisi halus untuk warna */
+}
+
+.dashboard-button:hover {
+  color: white; /* Warna font lebih tegas saat disentuh */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Warna latar transparan saat disentuh */
+}
+
+/* Styling untuk navbar di bawah header */
+.navbar {
+  background-color: #f0e4cb; /* Warna beige */
+  padding: 10px 20px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
+  font-size: 1.2rem; /* Ukuran font teks navbar */
+  color: black; /* Warna teks hitam */
+  border-top: 2px solid #866564; /* Garis pemisah dengan warna coklat tua */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Efek drop shadow */
+}
+
+/* Container untuk semua kartu postingan */
+.post-container {
+  padding: 20px; /* Memberikan ruang di sekeliling kontainer */
+}
+
+/* Grid layout untuk kartu postingan */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr; /* Tambahkan aturan ini untuk baris seragam */
+  gap: 60px;
+}
+
+/* Styling untuk setiap kartu postingan */
+.post-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 230px; /* Tambahkan tinggi minimum */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Styling untuk judul postingan */
+.post-title {
+  font-size: 1.5rem; /* Ukuran font besar untuk judul */
+  font-weight: bold; /* Membuat teks judul tebal */
+}
+
+/* Styling untuk konten (teks) postingan */
+.post-content {
+  font-size: 21px; /* Ukuran font standar */
+  line-height: 1.4; /* Jarak antar baris sedikit lebih rapat */
+  margin-top: -10px; /* Hilangkan jarak atas */
+  color: #444; /* Warna teks abu-abu gelap */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Footer dari setiap postingan, termasuk penulis dan tautan */
+.post-footer {
+  display: flex; /* Menjadikan elemen di dalamnya fleksibel (berbaris) */
+  justify-content: space-between; /* Menempatkan elemen di ujung kiri dan kanan */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  font-size: 0.9rem; /* Ukuran font sedikit lebih kecil */
+  color: #666; /* Warna teks abu-abu */
+}
+
+/* Styling untuk nama penulis */
+.post-author {
+  font-weight: bold; /* Membuat teks nama penulis tebal */
+}
+
+/* Styling untuk tanggal postingan */
+.post-date {
+  display: block; /* Menjadikan elemen tanggal sebagai blok terpisah */
+  font-weight: normal; /* Teks dengan berat normal */
+  color: #aaa; /* Warna teks abu-abu terang */
+  font-size: 0.85rem; /* Ukuran font kecil */
+}
+
+/* Styling untuk tautan "Lebih Lanjut" */
+.post-link {
+  text-decoration: none; /* Menghapus garis bawah default dari tautan */
+  color: #007bff; /* Warna biru khas tautan */
+  font-weight: bold; /* Membuat teks tautan tebal */
+}
+
+/* Efek hover pada tautan "Lebih Lanjut" */
+.post-link:hover {
+  text-decoration: underline; /* Menambahkan garis bawah saat diarahkan */
+}

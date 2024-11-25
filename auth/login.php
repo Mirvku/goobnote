@@ -4,10 +4,10 @@
 
     if (isset($_SESSION["role"])) {
         if ($_SESSION["role"] == "author") {
-            header("Location: /goobnote_2/dashboard/user/index.php");
+            header("Location: /spiral/dashboard/author/index.php");
             exit();
         } else if ($_SESSION["role"] == "admin") {
-            header("Location: /goobnote_2/dashboard/admin/index.php");
+            header("Location: /spiral/dashboard/admin/index.php");
             exit();
         }
     }
@@ -38,7 +38,7 @@
         </table>
     </form>
 
-    <p>Belum punya akun? <a href="/goobnote_2/auth/register.php">daftar</a></p>
+    <p>Belum punya akun? <a href="/spiral/auth/register.php">daftar</a></p>
 
     <?php
         if(isset($_POST["submit"])) {
@@ -49,14 +49,15 @@
 
             if ($result->num_rows > 0) {
                 $row = mysqli_fetch_assoc($result);
+                $_SESSION["id"] = $row["id"];
                 $_SESSION["nama"] = $row["nama"];
                 $_SESSION["role"] = $row["role"];
 
                 if ($_SESSION["role"] == "admin") {
-                    header("Location: /goobnote_2/dashboard/admin/index.php");
+                    header("Location: /spiral/Blogpage/index.php");
                 }
                 else if ($_SESSION["role"] == "author") {
-                    header("Location: /goobnote_2/dashboard/user/index.php");
+                    header("Location: /spiral/Blogpage/index.php");
                 }
             }
             else {
