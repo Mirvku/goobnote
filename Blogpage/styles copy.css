@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 /* Menghapus margin default dari body dan menetapkan font secara global */
 * {
   margin: 0;
@@ -8,7 +6,8 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-family: medium-content-sans-serif-font; /* Menggunakan font Arial sebagai default, dengan fallback sans-serif */
   min-height: 100vh;
   min-height: 100dvh;
 }
@@ -16,8 +15,8 @@ body {
 /* Styling untuk header di bagian atas halaman */
 .header {
   display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
-  /* justify-content: space-between; Ini di ganti jadi nambahin margin-right: auto di logo*/
-  align-items: center;
+  justify-content: space-between; /* Menempatkan elemen di ujung kiri dan kanan */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
   background-color: #8e7174; /* Warna coklat tua */
   padding: 10px 10px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
   color: white; /* Warna teks putih */
@@ -25,7 +24,6 @@ body {
 
 /* Styling untuk logo di dalam header */
 .logo {
-  margin-right: auto;
   display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
   align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
   font-weight: bold; /* Membuat teks logo tebal */
@@ -44,7 +42,7 @@ body {
 
 /* Styling untuk tombol dashboard di kanan header */
 .dashboard-button {
-  background-color: transparent;
+  background-color: transparent; /* Warna latar belakang transparan */
   border: none; /* Menghapus border */
   color: rgba(
     255,
@@ -79,19 +77,25 @@ body {
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Efek drop shadow */
 }
 
-.container {
+/* Container untuk semua kartu postingan */
+.post-container {
+  padding: min(5em, 7%);
+}
+
+/* Grid layout untuk kartu postingan */
+.post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 15px;
-  padding: min(5em, 2%);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 60px;
 }
 
 /* Styling untuk setiap kartu postingan */
 .post-card {
   background-color: white;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 2em;
+  padding: 20px;
+  min-height: 230px; /* Tambahkan tinggi minimum */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -101,7 +105,6 @@ body {
 .post-title {
   font-size: 1.5rem; /* Ukuran font besar untuk judul */
   font-weight: bold; /* Membuat teks judul tebal */
-  padding-bottom: 1em;
 }
 
 /* Styling untuk konten (teks) postingan */
@@ -114,8 +117,6 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  padding-bottom: 1em;
 }
 
 /* Footer dari setiap postingan, termasuk penulis dan tautan */
@@ -124,7 +125,7 @@ body {
   justify-content: space-between; /* Menempatkan elemen di ujung kiri dan kanan */
   align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
   font-size: 0.9rem; /* Ukuran font sedikit lebih kecil */
-  color: #353434; /* Warna teks abu-abu */
+  color: #666; /* Warna teks abu-abu */
 }
 
 /* Styling untuk nama penulis */
@@ -150,77 +151,4 @@ body {
 /* Efek hover pada tautan "Lebih Lanjut" */
 .post-link:hover {
   text-decoration: underline; /* Menambahkan garis bawah saat diarahkan */
-}
-
-#open-sidebar {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  /* position: relative; */
-}
-
-#close-sidebar {
-  display: none;
-  background: none;
-  border: none;
-  padding: 1em;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  #open-sidebar,
-  #close-sidebar {
-    display: block;
-  }
-
-  svg path {
-    fill: #444;
-  }
-
-  .logo-img {
-    display: none;
-  }
-
-  .header {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: min(15em, 100%);
-    z-index: 10;
-    border-left: 1px solid var(--hover-color);
-    transition: right 300ms ease-out;
-
-    flex-direction: column;
-    align-items: start !important;
-  }
-
-  .logo {
-    margin-right: unset;
-    margin-bottom: 2em;
-  }
-
-  .dashboard-button,
-  .logo {
-    padding-left: 2.5em;
-  }
-
-  .show {
-    right: 0;
-  }
-
-  .navbar {
-    display: flex;
-    border-top: none;
-    padding: 1em 2em;
-    margin-bottom: 2em;
-
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar span {
-    font-size: 1.4em;
-  }
 }

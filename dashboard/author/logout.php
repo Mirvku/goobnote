@@ -3,6 +3,6 @@ session_start();
 session_unset();
 session_destroy();
  
-header("Location: /spiral/home.php");
+header("Location: /goobnote/home.php");
 exit();
 ?>

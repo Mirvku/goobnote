@@ -3,13 +3,10 @@
 
     function totalContents() {
         global $conn;
-        $query = "SELECT * FROM contents ";
+        $query = "SELECT count(*) as total FROM contents ";
         $result = mysqli_query($conn, $query);
-        $rows = [];
-        while ($row = mysqli_fetch_assoc($result)) {
-            $rows[] = $row;
-        }
-        return $rows;
+        $rows = $result->fetch_assoc();
+        return $rows['total'];
     }
 
 ?>

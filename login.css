@@ -1,0 +1,121 @@
+/* Global Styles */
+
+/* Main Content */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('background.jpg') no-repeat center center/cover; /* Tambahkan background jika diperlukan */
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.login-container {
+  position: relative;
+  z-index: 2; /* Agar di atas blur */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin: -9px 0px 110px -10px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  margin: 20px 70px 40px 0px;
+}
+
+p {
+  color: #555;
+  margin: -40px 70px 30px 70px;
+
+}
+
+.input-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+.input-group img {
+  width: 5%;
+  margin: 0px 0px 0px -20px;
+}
+.input-group input {
+  width: 65%;
+  padding: 10px 2px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.input-group .icon {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.input-group .toggle-password {
+  position: absolute;
+  margin: 20px 0px 0px -30px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.login-button {
+  width: 65%;
+  background: #8e7c7c;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: #7c6c6c;
+}
+
+.register-text {
+  margin-top: 10px;
+  font-size: 14px;
+  margin: 10px 80px 30px 80px;
+}
+
+.register-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+
+  

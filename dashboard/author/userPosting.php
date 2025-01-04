@@ -2,7 +2,7 @@
     include "content/tambah.php";
     session_start();
      if (!isset($_SESSION["role"])){
-        header("Location: /spiral/index.php");
+        header("Location: /goobnote/index.php");
         exit(); 
      }
 

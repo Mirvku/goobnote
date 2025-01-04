@@ -17,10 +17,10 @@
         <nav>
             <ul>
                 <div class="sign">
-                <li><a href="/spiral/auth/login.php">Sign In</a></li>
+                <li><a href="/goobnote/auth/login.php">Sign In</a></li>
                 </div>
                 <div class="get">
-                <li><a href="/spiral/Blogpage/index.php" class="btnget">Get Started</a></li>
+                <li><a href="/goobnote/Blogpage/index.php" class="btnget">Get Started</a></li>
                 </div>
             </ul>
         </nav>
@@ -37,7 +37,7 @@
             <div class="text">
                 <h1>Spiral</h1>
                 <p>Spiral hadir dengan tampilan modern dan intuitif, memudahkan pengguna untuk membaca, menulis, dan berkolaborasi.</p>
-                <a href="/spiral/Blogpage/index.php" class="btn">Masuk</a>
+                <a href="/goobnote/Blogpage/index.php" class="btn">Masuk</a>
             </div>
             <div class="image">
                 <img src="img/spirallogo.jpg" alt="spiral" />

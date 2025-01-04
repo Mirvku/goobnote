@@ -3,6 +3,6 @@
     $id = $_GET['id'];
     $sql = "DELETE FROM contents WHERE id = $id";
     $result = mysqli_query($conn, $sql);
-    header("Location: /spiral/dashboard/author/index.php");
+    header("Location: /goobnote/dashboard/author/index.php");
     
 ?>

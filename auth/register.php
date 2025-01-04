@@ -4,9 +4,9 @@ session_start();
 
 if (isset($_SESSION["role"])) {
     if ($_SESSION["role"] == "author") {
-        header("Location: /spiral/dashboard/user/index.php");
+        header("Location: /goobnote/dashboard/user/index.php");
     } else if ($_SESSION["role"] == "admin") {
-        header("Location: /spiral/dashboard/admin/index.php");
+        header("Location: /goobnote/dashboard/admin/index.php");
     }
 }
 
@@ -28,7 +28,7 @@ $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/d
 
     <div class="header">
         <div class="spiral-font">
-            <img src="/spiral/img/removebg.png" alt="Spiral Logo" class="logo-img" />
+            <img src="/goobnote/img/removebg.png" alt="Spiral Logo" class="logo-img" />
             <span>Spiral</span>
         </div>
     </div>
@@ -41,7 +41,7 @@ $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/d
             </div>
             <div class="col col-1">
                 <div class="image">
-                    <img src="/spiral/img/image.png" class="form-image-main" alt="Form Image">
+                    <img src="/goobnote/img/image.png" class="form-image-main" alt="Form Image">
                 </div>
                 <h2 class="judul">Register</h2>
                 <p class="deskripsi">Hey, enter your details to Register your account</p>
@@ -76,7 +76,7 @@ $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/d
                 </form>
             </div>
             <div class="text">
-                <p class="register-text">Already have an account? <a href="/spiral/auth/login.php">Sign In!!</a></p>
+                <p class="register-text">Already have an account? <a href="/goobnote/auth/login.php">Sign In!!</a></p>
             </div>
         </div>
     </div>
@@ -93,7 +93,7 @@ $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/d
             $add = mysqli_query($conn, "INSERT INTO users VALUES ('','$email','$username', '$password', '$nama', 'author')");
             if ($add) {
                 echo "<script>alert('Pendaftaran berhasil!')</script>";
-                header("Location: /spiral/auth/login.php");
+                header("Location: /goobnote/auth/login.php");
             } else {
                 echo "<script>alert('Maaf, terjadi kesalahan.')</script>";
             }
