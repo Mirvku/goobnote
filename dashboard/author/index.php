@@ -11,6 +11,7 @@ include "content/tampil.php";
  }
  
  $data = tampil($_SESSION['id']);
+ $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/default-page.php';
  
 ?>
 <!DOCTYPE html>
@@ -28,7 +29,6 @@ include "content/tampil.php";
             <span>Spiral</span>
         </div>
         <div class="nav-items">
-            <a href="/goobnote/dashboard/author/index.php" class="dashboard-button">Dashboard</a>
             <form action="logout.php" method="POST" id="form">
                 <a href="javascript:{}" onclick="document.getElementById('form').submit();" class="dashboard-button">Logout</a>
             </form>

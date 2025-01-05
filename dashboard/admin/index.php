@@ -28,7 +28,7 @@ $contents = totalContents();
     <nav id="sidebar">
         <ul>
             <li>
-                <span class="logo">SPIRAL</span>
+                <a href="/goobnote/Blogpage/index.php" style="text-decoration: none;" class="logo">SPIRAL</a>
                 <button onclick="toggleSidebar()" id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#e8eaed">
