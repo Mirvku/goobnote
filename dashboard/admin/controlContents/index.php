@@ -108,7 +108,7 @@ $data = tampil();
             <tbody>
                 <?php foreach ($data as $posting) : ?>
                 <tr>
-                    <td><?= $posting['judul']; ?></td>
+                    <td><?= (strlen($posting['judul']) >= 50 ? substr($posting['content'], 0, 50) . '...' :  $posting['judul']);?></td>
                     <td><?= substr($posting['content'], 0, 50) . '...'; ?></td>
                     <td><?= $posting['username']; ?></td>
                     <td><?= date("F j, Y", strtotime($posting['created_at'])); ?></td>
