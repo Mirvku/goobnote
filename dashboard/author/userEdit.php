@@ -31,15 +31,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Dashboard - Edit Post</title>
+    <link rel="stylesheet" href="content.css" />
 </head>
 <body>
-    <form action="" method="POST">
-        <label for="judul">Judul</label><br>
-        <input type="text" name="judul" id="judul" required value="<?=$data['judul'] ?>"><br>
-        <label for="content"></label><br>
-        <textarea name="content" id="content" cols="30" rows="10" required "><?= $data['content']; ?></textarea><br>
-        <button type="submit" name="submit">Update</button>
+<form action="" method="POST">
+    <div class="container">
+        <div class="back-arrow">
+            <a href="<?= $previousPage; ?>" class="arrow">&larr;</a>
+        </div>
+        <input type="text" name="judul" class="title-input" placeholder="Judul Postingan...." value="<?=$data['judul'] ?>" required>
+        <textarea class="content" name="content" placeholder="Konten...." required>
+            <?= $data['content']; ?>
+        </textarea>
+        <!-- <div class="char-count">0/100</div> -->
+        <button type="submit" name="submit" class="post-button">Update</button>
+    </div>
     </form>
     
 </body>

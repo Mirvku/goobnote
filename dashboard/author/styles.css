@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Inter&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Lora;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8e7174;
+  color: white;
+  padding: 25px 20px;
+}
+
+.sub-header {
+  background-color: #f0e4cb;
+  color: black;
+  padding: 20px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spiral-font {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.dashboard-button {
+  background-color: transparent;
+  border: none;
+  color: rgba(251, 251, 251, 0.905);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.dashboard-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Body Section */
+.content {
+  padding: 20px;
+}
+
+.user-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: #86606c;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.back-button:hover {
+  color: white;
+  background-color: rgba(134, 96, 108, 0.2);
+}
+
+.user-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px; /* Add margin to create space below the back button */
+}
+
+.write-button {
+  align-self: flex-end;
+  background-color: #f1e4cb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.write-button:hover {
+  background-color: #dfd2b6;
+}
+
+.post-list {
+  margin-top: 20px;
+}
+
+.post-item {
+  max-width: 900px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-header h3 {
+  font-size: 18px;
+  margin-right: 10px; /* Add margin to separate title and actions */
+}
+
+.post-header .post-actions {
+  display: flex;
+  gap: 5px; /* Use gap for space between actions */
+}
+
+.post-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.post-item .post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.post-item .post-footer a,
+.post-item .post-header .post-actions a {
+  color: #86606c;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px; /* Smaller font size to better fit */
+}
+
+.post-header .post-actions a.update {
+  color: green; /* Green color for update */
+}
+
+.post-header .post-actions a.delete {
+  color: red; /* Red color for delete */
+}

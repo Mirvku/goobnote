@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Inter&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+  font-family: Lora, Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+a.arrow {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: black;
+}
+
+.title-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 200px); /* Adjust height to fit within container */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.post-button {
+  background-color: #f0e68c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-start; /* Aligning the button to the left */
+}

@@ -18,43 +18,53 @@ include "content/tampil.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .postingan {
-            border: 1px solid black;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>HEY <?php echo ucfirst($_SESSION['nama']);?>!</h1>
-    <form action="logout.php" method="post">
-        <button type="submit">Logout</button>
-    </form>
-    <div class="buatPosting">
-        <a href="/goobnote/dashboard/author/userPosting.php"><button>Buat Postingan</button></a>
+    <div class="header">
+        <div class="spiral-font">
+            <img src="spiral logo.png" alt="Spiral Logo" class="logo-img" />
+            <span>Spiral</span>
+        </div>
+        <a href="dashboard.html" class="dashboard-button">Dashboard</a>
     </div>
-    <a href="/goobnote/Blogpage/index.php"><button>Back</button></a>
-
-    <h1>Postingan mu</h1>
+    <div class="sub-header">Dashboard User</div>
     
-    <?php if (empty($data)) : ?>
-        <p>Kamu belum memposting apapun</p>
-    <?php endif ?>
+    <div class="content">
+        <button class="back-button">&larr; Back</button>
+        <div class="user-title-container">
+            <div class="user-title">Hello, <?php echo ucfirst($_SESSION['nama']);?></div>
+            <a href="/goobnote/dashboard/author/userPosting.php" class="write-button">Write</a>
+        </div>
 
-    <?php foreach ($data as $posting) : ?>
-        <div class="postingan">
-            <h2><?= $posting['judul']; ?></h2>
-            <a href="/goobnote/dashboard/author/userEdit.php?id=<?php echo $posting['id']; ?>">Edit</a>
-            <a href="/goobnote/dashboard/author/content/delete.php?id=<?php echo $posting['id']; ?>">Delete</a>
-            <p><?= substr($posting['content'], 0, 300); ?> ..</p>
-            <p><?= date("F j, Y", strtotime($posting['created_at'])); ?></p>
-            <a href="/goobnote/singlePost/index.php?id=<?= $posting['id']; ?>">lebih lanjut</a>
+        <?php if (empty($data)) : ?>
+            <p>Kamu belum memposting apapun</p>
+        <?php endif ?>
 
-        </div> 
+
+        <?php foreach ($data as $posting) : ?>
+        <div class="post-list">
+            <!-- Post Item 1 -->
+            <div class="post-item">
+                <div class="post-header">
+                    <h3><?= $posting['judul']; ?></h3>
+                    <div class="post-actions">
+                        <a href="/goobnote/dashboard/author/userEdit.php?id=<?php echo $posting['id']; ?>" class="update">Update</a>
+                        <a href="/goobnote/dashboard/author/content/delete.php?id=<?php echo $posting['id']; ?>" class="delete">Delete</a>
+                    </div>
+                </div>
+                <p>
+                <?= substr($posting['content'], 0, 300); ?>..
+                </p>
+                <div class="post-footer">
+                    <span><?= date("F j, Y", strtotime($posting['created_at'])); ?></span>
+                    <a href="/goobnote/singlePost/index.php?id=<?= $posting['id']; ?>"><b>Lebih Lanjut</b></a>
+                </div>
+            </div>
+        </div>
     <?php endforeach ?>
-    
+    </div>
     
 </body>
 </html>
