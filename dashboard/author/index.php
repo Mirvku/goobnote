@@ -24,15 +24,20 @@ include "content/tampil.php";
 <body>
     <div class="header">
         <div class="spiral-font">
-            <img src="spiral logo.png" alt="Spiral Logo" class="logo-img" />
+            <img src="/goobnote/img/removebg.png" alt="Spiral Logo" class="logo-img" />
             <span>Spiral</span>
         </div>
-        <a href="dashboard.html" class="dashboard-button">Dashboard</a>
+        <div class="nav-items">
+            <a href="/goobnote/dashboard/author/index.php" class="dashboard-button">Dashboard</a>
+            <form action="logout.php" method="POST" id="form">
+                <a href="javascript:{}" onclick="document.getElementById('form').submit();" class="dashboard-button">Logout</a>
+            </form>
+        </div>
     </div>
     <div class="sub-header">Dashboard User</div>
     
     <div class="content">
-        <button class="back-button">&larr; Back</button>
+        <a href="<?= $previousPage; ?>" style="text-decoration: none; color: black;" class="back-button">&larr; Back</a>
         <div class="user-title-container">
             <div class="user-title">Hello, <?php echo ucfirst($_SESSION['nama']);?></div>
             <a href="/goobnote/dashboard/author/userPosting.php" class="write-button">Write</a>

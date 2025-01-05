@@ -40,7 +40,7 @@
         <input type="text" name="judul" class="title-input" placeholder="Judul Postingan...." required>
         <textarea class="content" name="content" placeholder="Konten...." required></textarea>
         <!-- <div class="char-count">0/100</div> -->
-        <button type="submit" name="submit" class="post-button">posting</button>
+        <button type="submit" name="submit" class="post-button">Posting</button>
     </div>
     </form>
 </body>

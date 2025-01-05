@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Adamina&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Adamina";
+}
+
+body {
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+}
+
+.header-top {
+  background-color: #8e7174;
+  padding: 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 25px;
+  padding: 30px;
+}
+
+.header-bottom {
+  background-color: #f0e4cb;
+  height: 50px;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.back-button span {
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #000;
+  margin-top: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Form Styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 15px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4a3434;
+}
+
+button {
+  background-color: #8e7174;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4a3434;
+}
+
+.register-text {
+  text-align: center;
+  color: #666;
+}
+
+.register-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+}

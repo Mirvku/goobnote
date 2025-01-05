@@ -11,6 +11,8 @@
             exit();
         }
     }
+
+    $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/home.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,27 +20,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - GoobNote</title>
+    <title>Welcome back - Sign In</title>
+    <link rel="stylesheet" href="loginn.css"/>
 </head>
 <body>
-    <h2>Halaman Login</h2>
-    <form action="login.php" method="post" name="form_login">
-        <table border="0">
-            <tr>
-                <td><span>Username</span></td>
-                <td><input type="text" name="username" required></td>
-            </tr>
-            <tr>
-                <td><span>Password</span></td>
-                <td><input type="password" name="password" required></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
+    <header>
+      <div class="header-top">
+        <img src="/goobnote/img/spirallogo.jpg" class="logo" />
+        <div class="title">Spiral</div>
+      </div>
+      <div class="header-bottom"></div>
+    </header>
+    <main>
+      <div class="card">
+        <div class="back-button">
+        <a href="<?php echo $previousPage; ?>"><span>&larr;</span></a>
+        </div>
 
-    <p>Belum punya akun? <a href="/goobnote/auth/register.php">daftar</a></p>
+        <h1>Sign In</h1>
+        <p class="subtitle">
+          Hey, enter your details to login to your account.
+        </p>
+
+        <form action="login.php" method="post" name="form_login" class="login-form">
+          <div class="input-group">
+            <img src="/spiral/img/username.png" alt="username" class="input-icon" />
+            <input type="text" id="username" name="username" placeholder="Username" />
+          </div>
+
+          <div class="input-group">
+            <img src="/spiral/img/password.png" alt="password" class="input-icon" />
+            <input type="password" id="password" name="password" placeholder="Password" />
+            <img src="/spiral/img/eye.png" alt="show password" class="toggle-password" />
+          </div>
+
+          <button type="submit" name="submit" >Sign In</button>
+
+          <p class="register-text">
+            Don't have an account?
+            <a href="/spiral/auth/register.php">Register now!</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Spiral - All Right Reserved.</p>
+    </footer>
 
     <?php
         if(isset($_POST["submit"])) {
