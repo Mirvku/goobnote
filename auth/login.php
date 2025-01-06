@@ -22,6 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome back - Sign In</title>
     <link rel="stylesheet" href="loginn.css"/>
+    <script type="text/javascript" src="login.js" defer></script>
 </head>
 <body>
     <header>
@@ -44,21 +45,21 @@
 
         <form action="login.php" method="post" name="form_login" class="login-form">
           <div class="input-group">
-            <img src="/spiral/img/username.png" alt="username" class="input-icon" />
+            <img src="/goobnote/img/username.png" alt="username" class="input-icon" />
             <input type="text" id="username" name="username" placeholder="Username" />
           </div>
 
           <div class="input-group">
-            <img src="/spiral/img/password.png" alt="password" class="input-icon" />
+            <img src="/goobnote/img/password.png" alt="password" class="input-icon" />
             <input type="password" id="password" name="password" placeholder="Password" />
-            <img src="/spiral/img/eye.png" alt="show password" class="toggle-password" />
+            <img src="/goobnote/img/eye.png" alt="show password" class="toggle-password" />
           </div>
 
           <button type="submit" name="submit" >Sign In</button>
 
           <p class="register-text">
             Don't have an account?
-            <a href="/spiral/auth/register.php">Register now!</a>
+            <a href="/goobnote/auth/register.php">Register now!</a>
           </p>
         </form>
       </div>
