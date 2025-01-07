@@ -4,15 +4,15 @@
 
     if (isset($_SESSION["role"])) {
         if ($_SESSION["role"] == "author") {
-            header("Location: /goobnote/dashboard/author/index.php");
+            header("Location: /spiral/dashboard/author/index.php");
             exit();
         } else if ($_SESSION["role"] == "admin") {
-            header("Location: /goobnote/dashboard/admin/index.php");
+            header("Location: /spiral/dashboard/admin/index.php");
             exit();
         }
     }
 
-    $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/home.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
 <body>
     <header>
       <div class="header-top">
-        <img src="/goobnote/img/spirallogo.jpg" class="logo" />
+        <img src="/spiral/img/spirallogo.jpg" class="logo" />
         <div class="title">Spiral</div>
       </div>
       <div class="header-bottom"></div>
@@ -35,7 +35,7 @@
     <main>
       <div class="card">
         <div class="back-button">
-        <a href="<?php echo $previousPage; ?>"><span>&larr;</span></a>
+        <a href="/spiral/home.php"><span>&larr;</span></a>
         </div>
 
         <h1>Sign In</h1>
@@ -45,21 +45,21 @@
 
         <form action="login.php" method="post" name="form_login" class="login-form">
           <div class="input-group">
-            <img src="/goobnote/img/username.png" alt="username" class="input-icon" />
+            <img src="/spiral/img/username.png" alt="username" class="input-icon" />
             <input type="text" id="username" name="username" placeholder="Username" />
           </div>
 
           <div class="input-group">
-            <img src="/goobnote/img/password.png" alt="password" class="input-icon" />
+            <img src="/spiral/img/password.png" alt="password" class="input-icon" />
             <input type="password" id="password" name="password" placeholder="Password" />
-            <img src="/goobnote/img/eye.png" alt="show password" class="toggle-password" />
+            <img src="/spiral/img/eye.png" alt="show password" class="toggle-password" />
           </div>
 
           <button type="submit" name="submit" >Sign In</button>
 
           <p class="register-text">
             Don't have an account?
-            <a href="/goobnote/auth/register.php">Register now!</a>
+            <a href="/spiral/auth/register.php">Register now!</a>
           </p>
         </form>
       </div>
@@ -83,10 +83,10 @@
                 $_SESSION["role"] = $row["role"];
 
                 if ($_SESSION["role"] == "admin") {
-                    header("Location: /goobnote/Blogpage/index.php");
+                    header("Location: /spiral/Blogpage/index.php");
                 }
                 else if ($_SESSION["role"] == "author") {
-                    header("Location: /goobnote/Blogpage/index.php");
+                    header("Location: /spiral/Blogpage/index.php");
                 }
             }
             else {

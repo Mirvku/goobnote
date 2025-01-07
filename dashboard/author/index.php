@@ -2,16 +2,15 @@
 include "content/tampil.php";
  session_start();
  if (!isset($_SESSION["role"])){
-    header("Location: /goobnote/index.php");
+    header("Location: /spiral/index.php");
     exit(); 
  }elseif ($_SESSION["role"] != "author") {
     $path = $_SESSION["role"];
-    header("Location: /goobnote/dashboard/$path/index.php");
+    header("Location: /spiral/dashboard/$path/index.php");
     exit();
  }
  
  $data = tampil($_SESSION['id']);
- $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/default-page.php';
  
 ?>
 <!DOCTYPE html>
@@ -25,7 +24,7 @@ include "content/tampil.php";
 <body>
     <div class="header">
         <div class="spiral-font">
-            <img src="/goobnote/img/removebg.png" alt="Spiral Logo" class="logo-img" />
+            <img src="/spiral/img/removebg.png" alt="Spiral Logo" class="logo-img" />
             <span>Spiral</span>
         </div>
         <div class="nav-items">
@@ -37,10 +36,10 @@ include "content/tampil.php";
     <div class="sub-header">Dashboard User</div>
     
     <div class="content">
-        <a href="<?= $previousPage; ?>" style="text-decoration: none; color: black;" class="back-button">&larr; Back</a>
+        <a href="/spiral/Blogpage/index.php" style="text-decoration: none; color: black;" class="back-button">&larr; Back</a>
         <div class="user-title-container">
             <div class="user-title">Hello, <?php echo ucfirst($_SESSION['nama']);?></div>
-            <a href="/goobnote/dashboard/author/userPosting.php" class="write-button">Write</a>
+            <a href="/spiral/dashboard/author/userPosting.php" class="write-button">Write</a>
         </div>
 
         <?php if (empty($data)) : ?>
@@ -55,8 +54,8 @@ include "content/tampil.php";
                 <div class="post-header">
                     <h3><?= $posting['judul']; ?></h3>
                     <div class="post-actions">
-                        <a href="/goobnote/dashboard/author/userEdit.php?id=<?php echo $posting['id']; ?>" class="update">Update</a>
-                        <a href="/goobnote/dashboard/author/content/delete.php?id=<?php echo $posting['id']; ?>" class="delete">Delete</a>
+                        <a href="/spiral/dashboard/author/userEdit.php?id=<?php echo $posting['id']; ?>" class="update">Update</a>
+                        <a href="/spiral/dashboard/author/content/delete.php?id=<?php echo $posting['id']; ?>" class="delete">Delete</a>
                     </div>
                 </div>
                 <p>
@@ -64,7 +63,7 @@ include "content/tampil.php";
                 </p>
                 <div class="post-footer">
                     <span><?= date("F j, Y", strtotime($posting['created_at'])); ?></span>
-                    <a href="/goobnote/singlePost/index.php?id=<?= $posting['id']; ?>"><b>Lebih Lanjut</b></a>
+                    <a href="/spiral/singlePost/index.php?id=<?= $posting['id']; ?>"><b>Lebih Lanjut</b></a>
                 </div>
             </div>
         </div>
