@@ -18,7 +18,7 @@ $data = tampil($id);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Post - Spiral</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="login.js" text="text/javascript" defer></script>
+    <script type="text/javascript" src="script.js" defer></script>
   </head>
   <body>
     <!-- Header -->
