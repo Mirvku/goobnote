@@ -2,11 +2,11 @@
 include "function/tampil.php";
 session_start();
 if (!isset($_SESSION["role"])) {
-    header("Location: /goobnote/index.php");
+    header("Location: /spiral/index.php");
     exit();
 } elseif ($_SESSION["role"] != "admin") {
     $path = $_SESSION["role"];
-    header("Location: /goobnote/dashboard/$path/index.php");
+    header("Location: /spiral/dashboard/$path/index.php");
     exit();
 }
 
@@ -40,14 +40,14 @@ $data = tampil();
                 <td><?= $user["username"]; ?></td>
                 <td><?= $user["role"]; ?></td>
                 <td>
-                    <a href="/goobnote/dashboard/admin/controlUsers/editUsers.php?id=<?= $user["id"]; ?>">Edit</a> |
-                    <a href="/goobnote/dashboard/admin/controlUsers/function/delete.php?id=<?= $user["id"]; ?>" onclick="return confirm('Yakin ingin menghapus Users ini?');">Delete</a>
+                    <a href="/spiral/dashboard/admin/controlUsers/editUsers.php?id=<?= $user["id"]; ?>">Edit</a> |
+                    <a href="/spiral/dashboard/admin/controlUsers/function/delete.php?id=<?= $user["id"]; ?>" onclick="return confirm('Yakin ingin menghapus Users ini?');">Delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
-    <a href="/goobnote/dashboard/admin/controlUsers/addUsers.php"><button>Tambah Users</button></a>
-    <a href="/goobnote/dashboard/admin/index.php">Back</a>
+    <a href="/spiral/dashboard/admin/controlUsers/addUsers.php"><button>Tambah Users</button></a>
+    <a href="/spiral/dashboard/admin/index.php">Back</a>
 </body>
 
 </html>

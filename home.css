@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 /* Global Styles */
 :root {
   --primary-color: #11121a;
@@ -15,66 +17,99 @@
 }
 
 body {
-  font-family: medium-content-sans-serif-font;
+  font-family: Admina, sans-serif;
   background-color: #f2f2f2;
   color: #f2f2f2;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Header */
-header .btnget {
+/* Styling untuk header di bagian atas halaman */
+.header {
+  display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
+  /* justify-content: space-between; Ini di ganti jadi nambahin margin-right: auto di logo*/
+  align-items: center;
+  background-color: #8e7174; /* Warna coklat tua */
+  padding: 10px 10px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
+  color: white; /* Warna teks putih */
+}
+
+/* Styling untuk logo di dalam header */
+.logo {
+  margin-right: auto;
+  display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  font-weight: bold; /* Membuat teks logo tebal */
+}
+
+.logo h1 {
+  font-size: 28px; /* Ukuran font besar untuk teks logo */
+}
+
+/* Styling untuk elemen gambar logo */
+.logo-img {
+  width: 10%;
+  height: auto;
+  margin-right: 10px; /* Memberikan jarak antara logo gambar dan teks */
+}
+
+/* Styling untuk tombol dashboard di kanan header */
+.dashboard-button {
+  background-color: transparent;
+  border: none; /* Menghapus border */
+  color: #ffffff;
+  font-size: 1.2rem; /* Ukuran font tombol */
+  cursor: pointer; /* Mengubah kursor menjadi tangan saat diarahkan */
+  padding: 5px 10px; /* Ruang dalam di dalam tombol */
+  border-radius: 4px; /* Membulatkan sudut tombol */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Efek transisi halus untuk warna */
+  margin-right: 10px;
+}
+
+.dashboard-button-clr {
   background-color: #f0e4cb;
-  color: #333;
-  font-size: 20px;
+  color: #826b6d;
+  font-size: 1.2rem;
   font-weight: bold;
   border: none;
-  border-radius: 15px;
+  border-radius: 50px;
   padding: 10px 20px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
-header {
-  background-color: #8e7174;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-header .logo {
-  display: flex;
-  align-items: center;
-}
-header .logo span {
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff;
-  font-family: medium-content-sans-serif-font;
+
+/* Styling untuk navbar di bawah header */
+.navbar {
+  width: 100%;
+  background-color: #f0e4cb; /* Warna beige */
+  padding: 10px 20px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
+  font-size: 1.2rem; /* Ukuran font teks navbar */
+  color: black; /* Warna teks hitam */
+  border-top: 2px solid #866564; /* Garis pemisah dengan warna coklat tua */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Efek drop shadow */
 }
 
-header .logo img {
-  width: 10%;
-  height: auto;
-  margin-right: 10px;
-}
-header nav ul {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
+.hover-me:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 9px;
 }
 
-header nav ul li {
-  margin-left: 10px;
+#open-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* position: relative; */
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-header nav ul li a:hover {
-  color: #a79072;
+#close-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
 }
 
 /* body */
@@ -94,11 +129,12 @@ body h2 {
 }
 /* Main Content */
 .main-content {
+  max-width: 88%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 40px;
   background-color: #fff;
-  margin: 20px 40px;
+  margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

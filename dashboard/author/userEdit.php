@@ -2,7 +2,7 @@
     include "content/edit.php";
     session_start();
     if (!isset($_SESSION["role"])){
-       header("Location: /goobnote/index.php");
+       header("Location: /spiral/index.php");
        exit(); 
     }
 

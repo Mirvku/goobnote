@@ -3,11 +3,11 @@ include "total/totalUsers.php";
 include "total/totalContents.php";
 session_start();
 if (!isset($_SESSION["role"])) {
-    header("Location: /goobnote/index.php");
+    header("Location: /spiral/index.php");
     exit();
 }elseif ($_SESSION["role"] != "admin") {
     $path = $_SESSION["role"];
-    header("Location: /goobnote/dashboard/$path/index.php");
+    header("Location: /spiral/dashboard/$path/index.php");
     exit();
 }
 $users = totalUsers();
@@ -28,7 +28,7 @@ $contents = totalContents();
     <nav id="sidebar">
         <ul>
             <li>
-                <a href="/goobnote/Blogpage/index.php" style="text-decoration: none;" class="logo">SPIRAL</a>
+                <a href="/spiral/Blogpage/index.php" style="text-decoration: none;" class="logo">SPIRAL</a>
                 <button onclick="toggleSidebar()" id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#e8eaed">
@@ -38,7 +38,7 @@ $contents = totalContents();
                 </button>
             </li>
             <li class="active">
-                <a href="/goobnote/dashboard/admin/index.php">
+                <a href="/spiral/dashboard/admin/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#e8eaed">
                         <path
@@ -48,7 +48,7 @@ $contents = totalContents();
                 </a>
             </li>
             <li>
-                <a href="/goobnote/dashboard/admin/controlUsers/index.php">
+                <a href="/spiral/dashboard/admin/controlUsers/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#c9c9c9">
                         <path
@@ -58,7 +58,7 @@ $contents = totalContents();
                 </a>
             </li>
             <li>
-                <a href="/goobnote/dashboard/admin/controlContents/index.php">
+                <a href="/spiral/dashboard/admin/controlContents/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#c9c9c9">
                         <path

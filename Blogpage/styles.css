@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* Menghapus margin default dari body dan menetapkan font secara global */
 * {
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: Admina, sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
 }
@@ -77,6 +77,11 @@ body {
   color: black; /* Warna teks hitam */
   border-top: 2px solid #866564; /* Garis pemisah dengan warna coklat tua */
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Efek drop shadow */
+}
+
+.hover-me:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 9px;
 }
 
 .container {

@@ -2,11 +2,11 @@
     include "function/edit.php";
     session_start();
     if (!isset($_SESSION["role"])) {
-        header("Location: /goobnote/index.php");
+        header("Location: /spiral/index.php");
         exit();
     } elseif ($_SESSION["role"] != "admin") {
         $path = $_SESSION["role"];
-        header("Location: /goobnote/dashboard/$path/index.php");
+        header("Location: /spiral/dashboard/$path/index.php");
         exit();
     }
     $id = $_GET['id'];

@@ -3,11 +3,11 @@ include "function/tampil.php";
 
 session_start();
 if (!isset($_SESSION["role"])) {
-    header("Location: /goobnote/index.php");
+    header("Location: /spiral/index.php");
     exit();
 } elseif ($_SESSION["role"] != "admin") {
     $path = $_SESSION["role"];
-    header("Location: /goobnote/dashboard/$path/index.php");
+    header("Location: /spiral/dashboard/$path/index.php");
     exit();
 }
 
@@ -37,7 +37,7 @@ $data = tampil();
                 </button>
             </li>
             <li class="active">
-                <a href="/goobnote/dashboard/admin/index.php">
+                <a href="/spiral/dashboard/admin/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#e8eaed">
                         <path
@@ -47,7 +47,7 @@ $data = tampil();
                 </a>
             </li>
             <li>
-                <a href="/goobnote/dashboard/admin/controlUsers/index.php">
+                <a href="/spiral/dashboard/admin/controlUsers/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#c9c9c9">
                         <path
@@ -57,7 +57,7 @@ $data = tampil();
                 </a>
             </li>
             <li>
-                <a href="/goobnote/dashboard/admin/controlContents/index.php">
+                <a href="/spiral/dashboard/admin/controlContents/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#c9c9c9">
                         <path
@@ -113,9 +113,9 @@ $data = tampil();
                     <td><?= $posting['username']; ?></td>
                     <td><?= date("F j, Y", strtotime($posting['created_at'])); ?></td>
                     <td class="action">
-                        <a href="/goobnote/singlePost/index.php?id=<?= $posting['id']; ?>">View</a>
-                        <a href="/goobnote/dashboard/admin/controlContents/contentEdit.php?id=<?= $posting['id']; ?>" class="edit">Edit</a>
-                        <a href="/goobnote/dashboard/admin/controlContents/function/delete.php?id=<?= $posting['id']; ?>" 
+                        <a href="/spiral/singlePost/index.php?id=<?= $posting['id']; ?>">View</a>
+                        <a href="/spiral/dashboard/admin/controlContents/contentEdit.php?id=<?= $posting['id']; ?>" class="edit">Edit</a>
+                        <a href="/spiral/dashboard/admin/controlContents/function/delete.php?id=<?= $posting['id']; ?>" 
                            onclick="return confirm('Yakin ingin menghapus konten ini?');" class="delete">Delete</a>
                     </td>
                 </tr>

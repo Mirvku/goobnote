@@ -2,7 +2,7 @@
     include "content/tambah.php";
     session_start();
      if (!isset($_SESSION["role"])){
-        header("Location: /goobnote/index.php");
+        header("Location: /spiral/index.php");
         exit(); 
      }
 
@@ -19,7 +19,7 @@
             </script>";
         }
     }
-    $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/default-page.php';
+    $previousPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/home.php';
 
 ?>
 

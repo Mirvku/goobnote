@@ -2,11 +2,11 @@
 include "function/tampil.php";
 session_start();
 if (!isset($_SESSION["role"])) {
-    header("Location: /goobnote/index.php");
+    header("Location: /spiral/index.php");
     exit();
 } elseif ($_SESSION["role"] != "admin") {
     $path = $_SESSION["role"];
-    header("Location: /goobnote/dashboard/$path/index.php");
+    header("Location: /spiral/dashboard/$path/index.php");
     exit();
 }
 
@@ -39,7 +39,7 @@ $data = tampil();
                 </button>
             </li>
             <li class="active">
-                <a href="/goobnote/dashboard/admin/index.php">
+                <a href="/spiral/dashboard/admin/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#e8eaed">
                         <path
@@ -49,7 +49,7 @@ $data = tampil();
                 </a>
             </li>
             <li>
-                <a href="/goobnote/dashboard/admin/controlUsers/index.php">
+                <a href="/spiral/dashboard/admin/controlUsers/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#c9c9c9">
                         <path
@@ -59,7 +59,7 @@ $data = tampil();
                 </a>
             </li>
             <li>
-                <a href="/goobnote/dashboard/admin/controlContents/index.php">
+                <a href="/spiral/dashboard/admin/controlContents/index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#c9c9c9">
                         <path
@@ -115,15 +115,15 @@ $data = tampil();
                         <td><?= $user["username"]; ?></td>
                         <td><?= $user["role"]; ?></td>
                         <td class="action">
-                            <a href="/goobnote/dashboard/admin/controlUsers/editUsers.php?id=<?= $user["id"]; ?>" class="edit">Edit</a>
-                            <a href="/goobnote/dashboard/admin/controlUsers/function/delete.php?id=<?= $user["id"]; ?>" onclick="return confirm('Yakin ingin menghapus Users ini?');" class="delete">Delete</a>
+                            <a href="/spiral/dashboard/admin/controlUsers/editUsers.php?id=<?= $user["id"]; ?>" class="edit">Edit</a>
+                            <a href="/spiral/dashboard/admin/controlUsers/function/delete.php?id=<?= $user["id"]; ?>" onclick="return confirm('Yakin ingin menghapus Users ini?');" class="delete">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
 
-        <a href="/goobnote/dashboard/admin/controlUsers/addUsers.php" class="add-btn">Tambah User</a>
+        <a href="/spiral/dashboard/admin/controlUsers/addUsers.php" class="add-btn">Tambah User</a>
     </main>
 </body>
 

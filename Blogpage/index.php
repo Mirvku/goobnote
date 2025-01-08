@@ -26,14 +26,14 @@ $contents = tampilContents();
 
     <header class="header" id="navbar">
       <div class="logo">
-        <img src="/goobnote/img/removebg.png" alt="Spiral Logo" class="logo-img" />
-        <h1>Spiral</h1>
+        <img src="/spiral/img/removebg.png" alt="Spiral Logo" class="logo-img" />
+        <h1 onclick="window.location.href='/spiral/home.php'" style="cursor:pointer;">Spiral</h1>
       </div>
 
       <?php if (!$isLoggedIn): ?>
       <button
-        class="dashboard-button"
-        onclick="window.location.href='/goobnote/auth/login.php'"
+        class="dashboard-button hover-me"
+        onclick="window.location.href='/spiral/auth/login.php'"
       >
         Login
       </button>
@@ -41,8 +41,8 @@ $contents = tampilContents();
 
       <?php if ($isLoggedIn): ?>
       <button
-        class="dashboard-button"
-        onclick="window.location.href='/goobnote/dashboard/<?php echo $path; ?>/index.php'"
+        class="dashboard-button hover-me"
+        onclick="window.location.href='/spiral/dashboard/<?php echo $path; ?>/index.php'"
       >
         Dashboard
       </button>
@@ -73,7 +73,7 @@ $contents = tampilContents();
             <?= $content['nama'] ?>
               <span class="post-date"><?= date("F j, Y", strtotime($content['created_at'])); ?></span>
             </div>
-            <a href="/goobnote/singlePost/index.php?id=<?= $content['id'] ?>" class="post-link">Lebih Lanjut</a>
+            <a href="/spiral/singlePost/index.php?id=<?= $content['id'] ?>" class="post-link">Lebih Lanjut</a>
           </div>
         </article>
         <?php endforeach ?>

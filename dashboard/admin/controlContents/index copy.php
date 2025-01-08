@@ -3,11 +3,11 @@ include "function/tampil.php";
 
 session_start();
 if (!isset($_SESSION["role"])) {
-    header("Location: /goobnote/index.php");
+    header("Location: /spiral/index.php");
     exit();
 } elseif ($_SESSION["role"] != "admin") {
     $path = $_SESSION["role"];
-    header("Location: /goobnote/dashboard/$path/index.php");
+    header("Location: /spiral/dashboard/$path/index.php");
     exit();
 }
 
@@ -75,15 +75,15 @@ $data = tampil();
                     <td><?= $posting['username']; ?></td>
                     <td><?= date("F j, Y", strtotime($posting['created_at'])); ?></td>
                     <td class="actions">
-                        <a class="view" href="/goobnote/singlePost/index.php?id=<?= $posting['id']; ?>">view</a>
-                        <a class="edit" href="/goobnote/dashboard/admin/controlContents/contentEdit.php?id=<?= $posting['id']; ?>">Edit</a>
-                        <a class="delete" href="/goobnote/dashboard/admin/controlContents/function/delete.php?id=<?= $posting['id']; ?>" 
+                        <a class="view" href="/spiral/singlePost/index.php?id=<?= $posting['id']; ?>">view</a>
+                        <a class="edit" href="/spiral/dashboard/admin/controlContents/contentEdit.php?id=<?= $posting['id']; ?>">Edit</a>
+                        <a class="delete" href="/spiral/dashboard/admin/controlContents/function/delete.php?id=<?= $posting['id']; ?>" 
                            onclick="return confirm('Yakin ingin menghapus konten ini?');">Delete</a>
                     </td>
                 </tr>
             <?php endforeach ?>
         </tbody>
     </table>
-    <a href="/goobnote/dashboard/admin/index.php">Back</a>
+    <a href="/spiral/dashboard/admin/index.php">Back</a>
 </body>
 </html>

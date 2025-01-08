@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mengubah icon sesuai dengan status password
     if (type === 'password') {
-      this.src = '/goobnote/img/eye.png'; // Icon untuk menampilkan password
+      this.src = '/spiral/img/eye.png'; // Icon untuk menampilkan password
     } else {
-      this.src = '/goobnote/img/eye-off.png'; // Icon untuk menyembunyikan password
+      this.src = '/spiral/img/eye-off.png'; // Icon untuk menyembunyikan password
     }
   });
 });

@@ -14,52 +14,90 @@ body {
 }
 
 /* Header Styles */
-header {
-  width: 100%;
-}
-
-.header-top {
-  background-color: #8e7174;
-  padding: 40px;
-  height: 80px;
-  display: flex;
+.header {
+  display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
   align-items: center;
+  background-color: #8e7174; /* Warna coklat tua */
+  padding: 10px 10px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
+  color: white; /* Warna teks putih */
 }
 
-.title {
+/* Styling untuk logo di dalam header */
+header .logo {
+  margin-right: auto;
+  display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  font-weight: bold; /* Membuat teks logo tebal */
   color: white;
-  font-size: 25px;
-  padding: 30px;
 }
 
-.logo {
-  height: 50px;
-  width: 50px;
+.logo h1 {
+  font-size: 28px; /* Ukuran font besar untuk teks logo */
 }
 
-.dashboard-btn {
-  color: white;
+/* Styling untuk elemen gambar logo */
+.logo-img {
+  width: 10%;
+  height: auto;
+  margin-right: 10px; /* Memberikan jarak antara logo gambar dan teks */
+}
+
+/* Styling untuk tombol dashboard di kanan header */
+.dashboard-button {
+  background-color: transparent;
+  border: none; /* Menghapus border */
+  color: #ffffff;
+  font-size: 1.2rem; /* Ukuran font tombol */
+  cursor: pointer; /* Mengubah kursor menjadi tangan saat diarahkan */
+  padding: 5px 10px; /* Ruang dalam di dalam tombol */
+  border-radius: 4px; /* Membulatkan sudut tombol */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Efek transisi halus untuk warna */
+  margin-right: 10px;
+}
+
+.dashboard-button-clr {
+  background-color: #f0e4cb;
+  color: #826b6d;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Styling untuk navbar di bawah header */
+.navbar {
+  width: 100%;
+  background-color: #f0e4cb; /* Warna beige */
+  padding: 10px 20px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
+  font-size: 1.2rem; /* Ukuran font teks navbar */
+  color: black; /* Warna teks hitam */
+  border-top: 2px solid #866564; /* Garis pemisah dengan warna coklat tua */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Efek drop shadow */
+}
+
+.hover-me:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 9px;
+}
+
+#open-sidebar {
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 8px 16px;
-  transition: background-color 0.3s;
-  margin-left: auto;
+  /* position: relative; */
 }
 
-.dashboard-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Subheader Styles */
-.header-bottom {
-  background-color: #f0e4cb;
-  height: 50px;
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.1);
+#close-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
 }
 
 /* Main Content Styles */

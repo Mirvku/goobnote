@@ -9,12 +9,13 @@
 }
 
 body {
+  background-position: center;
+  background-attachment: fixed;
   font-family: Admina, sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
 }
 
-/* Header Styles */
 .header {
   display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
   align-items: center;
@@ -85,118 +86,157 @@ header .logo {
   border-radius: 9px;
 }
 
-/* Main Content */
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Card Styles */
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 400px;
+.form-container {
+  background: rgb(255, 255, 255);
   position: relative;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 800px;
+  height: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .back-button {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.back-button span {
-  color: #000;
-}
-
-main h1 {
-  text-align: center;
-  margin-bottom: 15px;
+  background: none;
+  border: none;
   font-size: 28px;
-  color: #000;
-  margin-top: 20px;
+  cursor: pointer;
+  margin: -9px 0px 110px -10px;
 }
 
-main a {
-  text-decoration: none;
+.col-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 0%;
+  margin-top: 53px;
+  backdrop-filter: blur(30px);
+  border-radius: 0 30% 20% 0;
+  transition: border-radius 0.3s;
+  padding-bottom: 150px;
+  padding-left: 150px;
 }
 
-.subtitle {
+.image {
+  position: relative;
+}
+
+.form-image-main {
+  position: relative;
+  left: 0;
+  width: 200px;
+}
+
+.judul {
   text-align: center;
-  color: #666;
-  margin-bottom: 30px;
+  font-size: 50px;
+}
+.deskripsi {
+  text-align: center;
+  width: 245px;
+  font-size: 23px;
+  padding-top: 20px;
 }
 
-/* Form Styles */
-.login-form {
+.col-2 {
+  position: relative;
+  display: flex;
+  width: 0%;
+  padding: 30px;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 150px;
+  padding-left: 230px;
+}
+
+.register-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 0 4vw;
 }
 
-.input-group {
+.form-inputs {
+  width: 100%;
+}
+
+.input-box {
   position: relative;
-  width: 100%;
+  right: 100px;
 }
 
-.input-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-}
-
-.toggle-password {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-input {
-  width: 100%;
-  padding: 15px 45px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
+.input-field {
+  width: 300px;
+  height: 55px;
+  padding: 0 15px;
+  margin: 10px 0;
+  color: rgb(0, 0, 0);
+  border: 1px solid #a7a7a7;
+  border-radius: 10px;
   outline: none;
-}
-
-input:focus {
-  border-color: #4a3434;
-}
-
-button {
-  background-color: #8e7174;
-  color: white;
-  padding: 15px;
-  border: none;
-  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-left: 40px;
   font-size: 16px;
+}
+
+.input-submit {
+  width: 300px;
+  height: 50px;
+  background: #8e7c7c;
+  color: #fff;
+  padding: 10px;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #4a3434;
+.input-submit:hover {
+  background: #7c6c6c;
 }
 
-.register-text {
+.input-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.input-box .bx-envelope {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.input-box .bx-key {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 20px;
+}
+
+p {
   text-align: center;
-  color: #666;
+  width: 260px;
+  font-size: 23px;
+  padding-top: 20px;
 }
 
 .register-text a {
@@ -206,14 +246,6 @@ button:hover {
 
 .register-text a:hover {
   text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #666;
-  font-size: 14px;
 }
 
 #open-sidebar {
