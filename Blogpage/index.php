@@ -59,8 +59,6 @@ $contents = tampilContents();
     </nav>
     
     
-    
-    
     <main class="container">
       <?php foreach ($contents as $content) : ?>
         <article class="post-card">

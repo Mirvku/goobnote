@@ -13,22 +13,38 @@ body {
   min-height: 100dvh;
 }
 
-/* Styling untuk header di bagian atas halaman */
+#open-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* position: relative; */
+}
+
+#close-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+
 .header {
   display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
-  /* justify-content: space-between; Ini di ganti jadi nambahin margin-right: auto di logo*/
   align-items: center;
   background-color: #8e7174; /* Warna coklat tua */
   padding: 10px 10px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
   color: white; /* Warna teks putih */
+  width: 100%;
 }
 
 /* Styling untuk logo di dalam header */
-.logo {
+header .logo {
   margin-right: auto;
   display: flex; /* Menjadikan elemen anak di dalamnya fleksibel (berbaris) */
   align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
   font-weight: bold; /* Membuat teks logo tebal */
+  color: white;
 }
 
 .logo h1 {
@@ -46,31 +62,18 @@ body {
 .dashboard-button {
   background-color: transparent;
   border: none; /* Menghapus border */
-  color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Warna font lebih redup (putih dengan transparansi 70%) */
-  font-size: 1rem; /* Ukuran font tombol */
+  color: #ffffff;
+  font-size: 1.2rem; /* Ukuran font tombol */
   cursor: pointer; /* Mengubah kursor menjadi tangan saat diarahkan */
   padding: 5px 10px; /* Ruang dalam di dalam tombol */
   border-radius: 4px; /* Membulatkan sudut tombol */
   transition: color 0.3s ease, background-color 0.3s ease; /* Efek transisi halus untuk warna */
+  margin-right: 10px;
+  text-decoration: none;
 }
-
-.dashboard-button:hover {
-  color: white; /* Warna font lebih tegas saat disentuh */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* Warna latar transparan saat disentuh */
-}
-
 /* Styling untuk navbar di bawah header */
 .navbar {
+  width: 100%;
   background-color: #f0e4cb; /* Warna beige */
   padding: 10px 20px; /* Ruang dalam di atas/bawah 10px dan kiri/kanan 20px */
   font-size: 1.2rem; /* Ukuran font teks navbar */
@@ -155,22 +158,6 @@ body {
 /* Efek hover pada tautan "Lebih Lanjut" */
 .post-link:hover {
   text-decoration: underline; /* Menambahkan garis bawah saat diarahkan */
-}
-
-#open-sidebar {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  /* position: relative; */
-}
-
-#close-sidebar {
-  display: none;
-  background: none;
-  border: none;
-  padding: 1em;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
