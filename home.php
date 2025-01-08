@@ -44,15 +44,6 @@ if (!isset($_SESSION["role"])) {
         Get Started
       </button>
       <?php endif ?>
-
-      <?php if ($isLoggedIn): ?>
-      <button
-        class="dashboard-button"
-        onclick="window.location.href='/spiral/dashboard/<?php echo $path; ?>/index.php'"
-      >
-        Dashboard
-      </button>
-      <?php endif; ?>
     </header>
     <nav class="navbar">
       <strong><span>Home</span></strong>
